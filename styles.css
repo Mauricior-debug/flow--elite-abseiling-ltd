@@ -307,6 +307,7 @@ p + p {
 .btn-primary {
   background: var(--cta);
   color: var(--cta-text);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
 }
 
 .btn-primary:hover {
@@ -314,9 +315,9 @@ p + p {
 }
 
 .btn-ghost {
-  background: transparent;
-  border-color: rgba(255, 255, 255, 0.35);
-  color: var(--text);
+  background: rgba(0, 0, 0, 0.45);
+  border-color: rgba(255, 255, 255, 0.7);
+  color: #ffffff;
 }
 
 .btn-ghost:hover {
@@ -368,8 +369,8 @@ p + p {
   inset: 0;
   z-index: 1;
   background:
-    linear-gradient(180deg, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0.2) 35%, rgba(0, 0, 0, 0.78) 100%),
-    linear-gradient(90deg, rgba(0, 0, 0, 0.55) 0%, rgba(0, 0, 0, 0.15) 55%, rgba(0, 0, 0, 0.45) 100%);
+    linear-gradient(180deg, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0.25) 28%, rgba(0, 0, 0, 0.88) 100%),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.72) 0%, rgba(0, 0, 0, 0.35) 48%, rgba(0, 0, 0, 0.55) 100%);
 }
 
 .hero-copy {
@@ -379,6 +380,17 @@ p + p {
   margin-inline: auto;
   padding: 4rem 0 calc(2.5rem + env(safe-area-inset-bottom));
   animation: rise 700ms ease both;
+  color: var(--text);
+}
+
+.hero-copy h1 {
+  color: #ffffff;
+  text-shadow: 0 2px 28px rgba(0, 0, 0, 0.65);
+}
+
+.hero-copy .lede {
+  color: #f0f0f0;
+  text-shadow: 0 1px 16px rgba(0, 0, 0, 0.55);
 }
 
 .page-hero {
@@ -466,6 +478,10 @@ main {
   object-position: center 25%;
 }
 
+.shot-lead {
+  margin-bottom: clamp(2.5rem, 6vw, 4rem);
+}
+
 .panel {
   background: var(--bg-secondary);
   padding: clamp(1.75rem, 4vw, 2.75rem);
@@ -474,6 +490,11 @@ main {
 .panel p {
   color: var(--text-muted);
   max-width: var(--measure);
+}
+
+.panel strong {
+  color: var(--text);
+  font-weight: 600;
 }
 
 .panel h2,
@@ -519,16 +540,18 @@ main {
   color: var(--text-muted);
 }
 
-.service-rail li:nth-child(2) {
-  padding-left: clamp(0rem, 6vw, 4rem);
-}
+@media (min-width: 720px) {
+  .service-rail li:nth-child(2) {
+    padding-left: 8vw;
+  }
 
-.service-rail li:nth-child(3) {
-  padding-left: clamp(0rem, 12vw, 8rem);
-}
+  .service-rail li:nth-child(3) {
+    padding-left: 16vw;
+  }
 
-.service-rail li:nth-child(4) {
-  padding-left: clamp(0rem, 4vw, 2.5rem);
+  .service-rail li:nth-child(4) {
+    padding-left: 5vw;
+  }
 }
 
 .link-more {
@@ -705,6 +728,14 @@ main {
   color: var(--text-muted);
 }
 
+.address-spaced {
+  margin-top: 2rem;
+}
+
+.company-no {
+  margin-top: 1rem;
+}
+
 .address-block a {
   display: inline-flex;
   align-items: center;
@@ -712,6 +743,14 @@ main {
   color: var(--accent);
   font-weight: 600;
   text-decoration: none;
+}
+
+.section-tight-top {
+  padding-top: 0;
+}
+
+.lede-after-shot {
+  margin-top: 1.5rem;
 }
 
 .sheet {
